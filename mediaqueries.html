@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Queries</title>
+        <style>
+            .sidebar {
+                float: left;
+                width: 25%;
+                background-color: rgb(200,200,200);
+            }
+            @media screen and (max-width:900px){
+                h1{
+                    color: red;
+                }
+            } 
+            
+            /* this is a way to use media queries */
+            @media print {
+                nav {
+                    display: none;
+                }
+                .sidebar {
+                    display: none;
+                }
+            }
+        </style>
+        <!-- This is an other way to do the same thing explained before in uses of media queries but now, everything will be located in the file css/print.css -->
+        <link rel="stylesheet" media="print" href="css/print.css">
+    </head>
+    <body>
+        <nav>
+            <span>menu item1</span>
+            <span>menu item2</span>
+        </nav>
+        
+        <div class="sidebar">
+            <ul>ELemento1</ul>
+            <ul>ELemento2</ul>
+        </div>
+        <h1>Media Queries are what makes RWD possible.</h1>
+    </body>
+</html>
